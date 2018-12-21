@@ -1,0 +1,168 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Alamofire-SwiftyJSON (3.0.0):
+    - Alamofire (~> 4.5)
+    - SwiftyJSON (~> 4.0.0)
+  - AXPhotoViewer (1.5.0):
+    - AXPhotoViewer/Core (= 1.5.0)
+  - AXPhotoViewer/Core (1.5.0):
+    - AXStateButton (>= 1.1.3)
+    - FLAnimatedImage (>= 1.0.0)
+    - FLAnimatedImage-tvOS (>= 1.0.16)
+  - AXStateButton (1.1.4)
+  - CLImageEditor/AllTools (0.2.3):
+    - CLImageEditor/Core
+    - CLImageEditor/EmoticonTool
+    - CLImageEditor/ResizeTool
+    - CLImageEditor/SplashTool
+    - CLImageEditor/StickerTool
+    - CLImageEditor/TextTool
+  - CLImageEditor/Core (0.2.3)
+  - CLImageEditor/EmoticonTool (0.2.3):
+    - CLImageEditor/Core
+  - CLImageEditor/ResizeTool (0.2.3):
+    - CLImageEditor/Core
+  - CLImageEditor/SplashTool (0.2.3):
+    - CLImageEditor/Core
+  - CLImageEditor/StickerTool (0.2.3):
+    - CLImageEditor/Core
+  - CLImageEditor/TextTool (0.2.3):
+    - CLImageEditor/Core
+  - FLAnimatedImage (1.0.12)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (2.7.0):
+    - GoogleMaps (= 2.7.0)
+    - GooglePlaces (= 2.7.0)
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
+  - IQKeyboardManagerSwift (6.1.1)
+  - Kingfisher (4.8.1)
+  - LoremIpsum (1.0.0)
+  - NVActivityIndicatorView (4.3.0):
+    - NVActivityIndicatorView/Presenter (= 4.3.0)
+  - NVActivityIndicatorView/Presenter (4.3.0)
+  - Pageboy (2.5.4)
+  - PromiseKit (6.4.0):
+    - PromiseKit/CorePromise (= 6.4.0)
+    - PromiseKit/Foundation (= 6.4.0)
+    - PromiseKit/UIKit (= 6.4.0)
+  - PromiseKit/Alamofire (6.4.0):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (6.4.0)
+  - PromiseKit/Foundation (6.4.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.4.0):
+    - PromiseKit/CorePromise
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - SlackTextViewController (1.9.6)
+  - SnapKit (4.0.0)
+  - Socket.IO-Client-Swift (12.1.2):
+    - Starscream (~> 2.1.1)
+  - Starscream (2.1.1)
+  - SwiftKeychainWrapper (3.0.1)
+  - SwiftLocation (3.2.3):
+    - SwiftyJSON (~> 4.0.0-alpha.1)
+  - SwiftMessages (4.1.4):
+    - SwiftMessages/App (= 4.1.4)
+  - SwiftMessages/App (4.1.4)
+  - SwiftyBeaver (1.6.0)
+  - SwiftyJSON (4.0.0)
+  - Toaster (2.1.1)
+  - UIImageView-Letters (1.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - Alamofire-SwiftyJSON
+  - AXPhotoViewer
+  - CLImageEditor/AllTools
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - LoremIpsum
+  - NVActivityIndicatorView
+  - Pageboy
+  - PromiseKit (~> 6.0)
+  - PromiseKit/Alamofire (~> 6.0)
+  - SDWebImage
+  - SlackTextViewController
+  - SnapKit (~> 4.0.0)
+  - Socket.IO-Client-Swift (= 12.1.2)
+  - SwiftKeychainWrapper
+  - SwiftLocation (~> 3.2.3)
+  - SwiftMessages
+  - SwiftyBeaver
+  - SwiftyJSON (~> 4.0)
+  - Toaster
+  - UIImageView-Letters
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Alamofire-SwiftyJSON
+    - AXPhotoViewer
+    - AXStateButton
+    - CLImageEditor
+    - FLAnimatedImage
+    - GoogleMaps
+    - GooglePlacePicker
+    - GooglePlaces
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - LoremIpsum
+    - NVActivityIndicatorView
+    - Pageboy
+    - PromiseKit
+    - SDWebImage
+    - SlackTextViewController
+    - SnapKit
+    - Socket.IO-Client-Swift
+    - Starscream
+    - SwiftKeychainWrapper
+    - SwiftLocation
+    - SwiftMessages
+    - SwiftyBeaver
+    - SwiftyJSON
+    - Toaster
+    - UIImageView-Letters
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
+  AXPhotoViewer: 76f564287c178019f29f4bd538267e6130cfbc0e
+  AXStateButton: 6c515a433e37551505046429b5be04c12daa8c07
+  CLImageEditor: 8e50fa16d9230d5d4677a006bb2a2912079a17d8
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlacePicker: 59ea44db173c58486ad6123993e81feefcbce9c3
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  LoremIpsum: 9029c55d36501b2ee0b05cc9ecda11d3a0479160
+  NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
+  Pageboy: 46d743783414a18f8b27a988485e0ed2ea219ff7
+  PromiseKit: ae3616f45d7bb9bf4ff1e91abc9b7a8c48a340e0
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SlackTextViewController: b854e62c1c156336bc4fd409c6ca79b5773e8f9d
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Socket.IO-Client-Swift: ba3cb1c4bf0a6ca90080406a2c22685c25ad1f60
+  Starscream: 142bd8ef24592d985daee9fa48c936070b85b15f
+  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
+  SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
+  SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
+  SwiftyBeaver: e45759613e50b522b0e6f53b1f0f14389b45ca34
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
+  UIImageView-Letters: f62db28076797adf3560ab7410647dc6899b9eef
+
+PODFILE CHECKSUM: 402d822f37f7622f9b21c96c85bcb0ead71ae3b7
+
+COCOAPODS: 1.5.3
