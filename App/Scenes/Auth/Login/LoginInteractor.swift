@@ -20,30 +20,34 @@ protocol LoginBusinessLogic
 
 protocol LoginDataStore
 {
-    //var name: String { get set }
+    var token: String { get set }
 }
 
 class LoginInteractor: LoginBusinessLogic, LoginDataStore
 {
     var presenter: LoginPresentationLogic?
     var worker: LoginWorker?
-    //var name: String = ""
+    var token: String = ""
     
     // MARK: Do something
     
     func login(request: Login.Login.Request)
     {
+    	presenter?.showLoading(response: Login.ShowLoading.Response())
+        
+            
         worker = LoginWorker()
+        
         worker?.login(email: request.email, password: request.password)
             .done({ (result) in
-                LocalStorageService.shared.saveToken(token: result.token)
-                ApiService.shared.setToken(result.token)
-                let response = Login.Login.Response(LoginResult: result, isError: false, errorMessage: nil)
-                self.presenter?.presentLoginResult(response: response)
+                self.presenter?.hideLoading(response: Login.HideLoading.Response())
+                self.token = result.token
+                self.presenter?.gotoMain(response: Login.GotoMain.Response())
             })
             .catch({ (error) in
-                let response = Login.Login.Response(LoginResult: nil, isError: true, errorMessage: error.localizedDescription)
-                self.presenter?.presentLoginResult(response: response)
+                self.presenter?.hideLoading(response: Login.HideLoading.Response())
+                let response = Login.ShowError.Response(error: error)
+                self.presenter?.showError(response: response)
             })
     }
 }

@@ -15,23 +15,33 @@ import SnapKit
 
 protocol LoginDisplayLogic: class
 {
-    func displayLoginResult(viewModel: Login.Login.ViewModel)
+    func showLoading(viewModel: Login.ShowLoading.ViewModel)
+    func hideLoading(viewModel: Login.HideLoading.ViewModel)
+    func displayError(viewModel: Login.ShowError.ViewModel)
+    func gotoMain(viewModel: Login.GotoMain.ViewModel)
 }
 
 class LoginViewController: UIViewController, LoginDisplayLogic
 {
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     var interactor: LoginBusinessLogic?
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
-    
-    // MARK: Object lifecycle
     
     override func loadView() {
         super.loadView()
         setup()
-        initView()
     }
     
-    // MARK: Setup
+    // MARK: View lifecycle
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        title = "Login"
+    }
+    
     private func setup()
     {
         let viewController = self
@@ -46,77 +56,31 @@ class LoginViewController: UIViewController, LoginDisplayLogic
         router.dataStore = interactor
     }
     
-    // MARK: Init View
-    var textFieldEmail: MTextField!
-    var textFieldPassword: MTextField!
-    var buttonLogin: MButton!
+    // MARK: action logic
     
-    private func initView() {
-        // MARK: container view
-        view = MView()
-        // MARK: navigation
-        navigationController?.isNavigationBarHidden = true
-        // MARK: password text field
-        textFieldPassword = MTextField()
-        view.addSubview(textFieldPassword)
-        textFieldPassword.snp.makeConstraints { (m) in
-            m.centerY.equalToSuperview()
-            m.leading.equalToSuperview().offset(K.UI.defaultMargin)
-            m.trailing.equalToSuperview().offset(-K.UI.defaultMargin)
-            m.height.equalTo(K.UI.defaultTextFieldHeight)
-        }
-        textFieldPassword.text = "123456"
-        // MARK: email text field
-        textFieldEmail = MTextField()
-        view.addSubview(textFieldEmail)
-        textFieldEmail.snp.makeConstraints { (m) in
-            m.leading.equalTo(textFieldPassword.snp.leading)
-            m.trailing.equalTo(textFieldPassword.snp.trailing)
-            m.bottom.equalTo(textFieldPassword.snp.top).offset(-K.UI.defaultControlDistance)
-            m.height.equalTo(K.UI.defaultTextFieldHeight)
-        }
-        textFieldEmail.text = "haduclinhbkit@gmail.com"
-        // MARK: login button
-        buttonLogin = MButton("Login")
-        view.addSubview(buttonLogin)
-        buttonLogin.snp.makeConstraints { (m) in
-            m.height.equalTo(K.UI.defaultButtonHeight)
-            m.leading.equalToSuperview().offset(K.UI.defaultMargin)
-            m.trailing.equalToSuperview().offset(-K.UI.defaultMargin)
-            m.bottom.equalTo(self.view.readableContentGuide.snp.bottom).inset(K.UI.defaultMargin)
-        }
-        buttonLogin.addTarget(self, action: #selector(self.login), for: .touchUpInside)
+    @IBAction func loginAction(_ sender: Any) {
         
+        let request = Login.Login.Request(email: usernameTextField.text!, password: passwordTextField.text!)
+        interactor?.login(request: request)
     }
     
-    // MARK: View lifecycle
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
+    // MARK: display logic
+    func showLoading(viewModel: Login.ShowLoading.ViewModel) {
+        Helper.showLoading()
     }
     
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    @objc func login()
-    {
-        interactor?.login(request: Login.Login.Request(email: textFieldEmail.text!, password: textFieldPassword.text!))
+    func hideLoading(viewModel: Login.HideLoading.ViewModel) {
+        Helper.hideLoading()
     }
     
-    func showError(_ error: String?) {
-        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            
-        }
+    func displayError(viewModel: Login.ShowError.ViewModel) {
+        let alert = UIAlertController(title: "Error", message: viewModel.errorString, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in }
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
     
-    func displayLoginResult(viewModel: Login.Login.ViewModel) {
-        if viewModel.isError {
-            showError(viewModel.errorMessage)
-        } else {
-            router?.routeToMain()
-        }
+    func gotoMain(viewModel: Login.GotoMain.ViewModel) {
+        router?.routeToMain()
     }
 }

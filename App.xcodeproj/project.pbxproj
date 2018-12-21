@@ -15,6 +15,14 @@
 		F12AE4812146759A0099BE05 /* BusinessModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12AE47B2146759A0099BE05 /* BusinessModels.swift */; };
 		F12AE4822146759A0099BE05 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12AE47C2146759A0099BE05 /* BusinessViewController.swift */; };
 		F12AE4832146759A0099BE05 /* BusinessInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12AE47D2146759A0099BE05 /* BusinessInteractor.swift */; };
+		F1DBE33621CBED0D00D68B3A /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1DBE33521CBED0D00D68B3A /* LoginView.xib */; };
+		F1DBE33E21CC8C0E00D68B3A /* LogoutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBE33821CC8C0E00D68B3A /* LogoutPresenter.swift */; };
+		F1DBE33F21CC8C0E00D68B3A /* LogoutWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBE33921CC8C0E00D68B3A /* LogoutWorker.swift */; };
+		F1DBE34021CC8C0E00D68B3A /* LogoutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBE33A21CC8C0E00D68B3A /* LogoutRouter.swift */; };
+		F1DBE34121CC8C0E00D68B3A /* LogoutModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBE33B21CC8C0E00D68B3A /* LogoutModels.swift */; };
+		F1DBE34221CC8C0E00D68B3A /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBE33C21CC8C0E00D68B3A /* LogoutViewController.swift */; };
+		F1DBE34321CC8C0E00D68B3A /* LogoutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBE33D21CC8C0E00D68B3A /* LogoutInteractor.swift */; };
+		F1DBE34621CC8C6000D68B3A /* LogoutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1DBE34521CC8C6000D68B3A /* LogoutView.xib */; };
 		F1E572F721462A0800E7C31B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E572F621462A0800E7C31B /* AppDelegate.swift */; };
 		F1E572FC21462A0800E7C31B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E572FA21462A0800E7C31B /* Main.storyboard */; };
 		F1E572FE21462A0A00E7C31B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E572FD21462A0A00E7C31B /* Assets.xcassets */; };
@@ -236,6 +244,14 @@
 		F12AE47B2146759A0099BE05 /* BusinessModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessModels.swift; sourceTree = "<group>"; };
 		F12AE47C2146759A0099BE05 /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		F12AE47D2146759A0099BE05 /* BusinessInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInteractor.swift; sourceTree = "<group>"; };
+		F1DBE33521CBED0D00D68B3A /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		F1DBE33821CC8C0E00D68B3A /* LogoutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutPresenter.swift; sourceTree = "<group>"; };
+		F1DBE33921CC8C0E00D68B3A /* LogoutWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutWorker.swift; sourceTree = "<group>"; };
+		F1DBE33A21CC8C0E00D68B3A /* LogoutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRouter.swift; sourceTree = "<group>"; };
+		F1DBE33B21CC8C0E00D68B3A /* LogoutModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutModels.swift; sourceTree = "<group>"; };
+		F1DBE33C21CC8C0E00D68B3A /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		F1DBE33D21CC8C0E00D68B3A /* LogoutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutInteractor.swift; sourceTree = "<group>"; };
+		F1DBE34521CC8C6000D68B3A /* LogoutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoutView.xib; sourceTree = "<group>"; };
 		F1E572F321462A0800E7C31B /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E572F621462A0800E7C31B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E572FB21462A0800E7C31B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -485,6 +501,36 @@
 				F112D9A62147CFD300E6C974 /* MLabel.swift */,
 			);
 			path = Label;
+			sourceTree = "<group>";
+		};
+		F1DBE33221CBEB0B00D68B3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1DBE33521CBED0D00D68B3A /* LoginView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1DBE33721CC8BE500D68B3A /* logout */ = {
+			isa = PBXGroup;
+			children = (
+				F1DBE34421CC8C4900D68B3A /* Views */,
+				F1DBE33821CC8C0E00D68B3A /* LogoutPresenter.swift */,
+				F1DBE33921CC8C0E00D68B3A /* LogoutWorker.swift */,
+				F1DBE33A21CC8C0E00D68B3A /* LogoutRouter.swift */,
+				F1DBE33B21CC8C0E00D68B3A /* LogoutModels.swift */,
+				F1DBE33C21CC8C0E00D68B3A /* LogoutViewController.swift */,
+				F1DBE33D21CC8C0E00D68B3A /* LogoutInteractor.swift */,
+			);
+			path = logout;
+			sourceTree = "<group>";
+		};
+		F1DBE34421CC8C4900D68B3A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1DBE34521CC8C6000D68B3A /* LogoutView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F1E572EA21462A0800E7C31B = {
@@ -817,6 +863,7 @@
 		F1E573CA21462A7D00E7C31B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				F1DBE33721CC8BE500D68B3A /* logout */,
 				F1E573CC21462A7D00E7C31B /* Launch */,
 				F1E573CB21462A7D00E7C31B /* ForgotPassword */,
 				F1E573D321462A7D00E7C31B /* Register */,
@@ -863,6 +910,7 @@
 		F1E573D521462A7D00E7C31B /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F1DBE33221CBEB0B00D68B3A /* View */,
 				F1E573D721462A7D00E7C31B /* LoginModels.swift */,
 				F1E573D821462A7D00E7C31B /* LoginViewController.swift */,
 				F1E573D921462A7D00E7C31B /* LoginPresenter.swift */,
@@ -1065,7 +1113,9 @@
 			files = (
 				F1E5730121462A0A00E7C31B /* LaunchScreen.storyboard in Resources */,
 				F1E572FE21462A0A00E7C31B /* Assets.xcassets in Resources */,
+				F1DBE33621CBED0D00D68B3A /* LoginView.xib in Resources */,
 				F1E572FC21462A0800E7C31B /* Main.storyboard in Resources */,
+				F1DBE34621CC8C6000D68B3A /* LogoutView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1234,6 +1284,8 @@
 				F1E573E621462A7D00E7C31B /* SourcePreprocessor.swift in Sources */,
 				F1E573DE21462A7D00E7C31B /* Extensions.swift in Sources */,
 				F1E5744421462A7E00E7C31B /* Material+UIViewController.swift in Sources */,
+				F1DBE33F21CC8C0E00D68B3A /* LogoutWorker.swift in Sources */,
+				F1DBE34321CC8C0E00D68B3A /* LogoutInteractor.swift in Sources */,
 				F1E5744621462A7E00E7C31B /* Material+NSMutableAttributedString.swift in Sources */,
 				F1E574AF214668FA00E7C31B /* FeedWorker.swift in Sources */,
 				F1E5745921462A7E00E7C31B /* CardCollectionViewCell.swift in Sources */,
@@ -1266,6 +1318,7 @@
 				F1E5743721462A7E00E7C31B /* EdgeInsets.swift in Sources */,
 				F1E573F921462A7E00E7C31B /* MotionAnimatorViewContext.swift in Sources */,
 				F1E5746621462A7E00E7C31B /* ApiService.swift in Sources */,
+				F1DBE34221CC8C0E00D68B3A /* LogoutViewController.swift in Sources */,
 				F1E5744E21462A7E00E7C31B /* Device.swift in Sources */,
 				F1E5742521462A7E00E7C31B /* HeightPreset.swift in Sources */,
 				F1E5744B21462A7E00E7C31B /* Material+MotionAnimation.swift in Sources */,
@@ -1288,6 +1341,7 @@
 				F1E5747021462A7E00E7C31B /* LaunchPresenter.swift in Sources */,
 				F1E5747821462A7E00E7C31B /* LoginViewController.swift in Sources */,
 				F1E574BF2146691000E7C31B /* ProfileInteractor.swift in Sources */,
+				F1DBE34121CC8C0E00D68B3A /* LogoutModels.swift in Sources */,
 				F1E573DF21462A7D00E7C31B /* MotionPreprocessor.swift in Sources */,
 				F1E5741A21462A7E00E7C31B /* CheckButton.swift in Sources */,
 				F1E573F621462A7E00E7C31B /* MotionAnimator.swift in Sources */,
@@ -1317,6 +1371,7 @@
 				F112D9A72147CFD300E6C974 /* MLabel.swift in Sources */,
 				F1E574BE2146691000E7C31B /* ProfileViewController.swift in Sources */,
 				F1E5745021462A7E00E7C31B /* Material+UILabel.swift in Sources */,
+				F1DBE33E21CC8C0E00D68B3A /* LogoutPresenter.swift in Sources */,
 				F1E573FE21462A7E00E7C31B /* Motion+CAMediaTimingFunction.swift in Sources */,
 				F1E574A4214668EB00E7C31B /* BookmarkRouter.swift in Sources */,
 				F1E5743621462A7E00E7C31B /* Material+UIWindow.swift in Sources */,
@@ -1327,6 +1382,7 @@
 				F1E5747721462A7E00E7C31B /* LoginModels.swift in Sources */,
 				F1E5745821462A7E00E7C31B /* SpringAnimation.swift in Sources */,
 				F1E5741121462A7E00E7C31B /* View.swift in Sources */,
+				F1DBE34021CC8C0E00D68B3A /* LogoutRouter.swift in Sources */,
 				F1E5745721462A7E00E7C31B /* Font.swift in Sources */,
 				F1E5744721462A7E00E7C31B /* RadioButton.swift in Sources */,
 				F1E5741321462A7E00E7C31B /* CollectionViewLayout.swift in Sources */,

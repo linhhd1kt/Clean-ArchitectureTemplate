@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Router.asURLRequest():ApiService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "parameters">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginInteractor.login(request:):LoginInteractor.swift">
+      </ContextState>
+      <ContextState
          contextName = "LoginViewController.login():LoginViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -11,13 +22,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "LoginInteractor.login(request:):LoginInteractor.swift">
-      </ContextState>
-      <ContextState
-         contextName = "Router.asURLRequest():ApiService.swift">
+         contextName = "LoginViewController.loginAction(_:):LoginViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "parameters">
+               value = "interactor">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

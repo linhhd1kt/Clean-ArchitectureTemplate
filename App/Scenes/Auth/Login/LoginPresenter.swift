@@ -14,16 +14,31 @@ import UIKit
 
 protocol LoginPresentationLogic
 {
-  func presentLoginResult(response: Login.Login.Response)
+    func showLoading(response: Login.ShowLoading.Response)
+    func hideLoading(response: Login.HideLoading.Response)
+    func showError(response: Login.ShowError.Response)
+    func gotoMain(response: Login.GotoMain.Response)
 }
 
 class LoginPresenter: LoginPresentationLogic
 {
-  weak var viewController: LoginDisplayLogic?
-  
-  // MARK: Do something
-  func presentLoginResult(response: Login.Login.Response) {
-    let viewModel = Login.Login.ViewModel(token: response.LoginResult?.token, isError: response.isError, errorMessage: response.errorMessage)
-    viewController?.displayLoginResult(viewModel: viewModel)
-  }
+    weak var viewController: LoginDisplayLogic?
+    
+    func showLoading(response: Login.ShowLoading.Response) {
+        viewController?.showLoading(viewModel: Login.ShowLoading.ViewModel())
+    }
+    
+    func hideLoading(response: Login.HideLoading.Response) {
+        viewController?.hideLoading(viewModel: Login.HideLoading.ViewModel())
+    }
+    
+    // MARK: Do something
+    func showError(response: Login.ShowError.Response) {
+        let viewModel = Login.ShowError.ViewModel(errorString: response.error.localizedDescription)
+        viewController?.displayError(viewModel: viewModel)
+    }
+    
+    func gotoMain(response: Login.GotoMain.Response) {
+        viewController?.gotoMain(viewModel: Login.GotoMain.ViewModel())
+    }
 }

@@ -14,28 +14,53 @@ import UIKit
 
 enum Login
 {
-  // MARK: Use cases
-  
-  enum Login
-  {
-    struct Request
+    // MARK: Use cases
+    
+    enum Login
     {
-        var email: String
-        var password: String
+        struct Request {
+            var email: String
+            var password: String
+        }
+        
+        struct Response
+        {
+            var token: String?
+            var isSuccess: Bool
+            var error: Error?
+        }
+        
+        struct ViewModel {
+            var isSuccess: Bool
+            var errorString: String?
+        }
     }
     
-    struct Response
-    {
-        var LoginResult: LoginResult?
-        var isError: Bool
-        var errorMessage: String?
+    enum GotoMain {
+        struct Request {}
+        struct Response{}
+        struct ViewModel{}
     }
     
-    struct ViewModel
-    {
-        var token: String?
-        var isError: Bool
-        var errorMessage: String?
+    enum ShowError {
+        struct Request {}
+        struct Response{
+            var error: Error
+        }
+        struct ViewModel{
+            var errorString: String
+        }
     }
-  }
+    
+    enum ShowLoading {
+        struct Request {}
+        struct Response{}
+        struct ViewModel{}
+    }
+    
+    enum HideLoading {
+        struct Request {}
+        struct Response{}        
+        struct ViewModel{}
+    }
 }

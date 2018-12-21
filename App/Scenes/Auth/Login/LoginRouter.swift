@@ -32,8 +32,10 @@ class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing
   func routeToMain() {
     guard let source = self.viewController else { return }
     let mainVC = MainViewController()
+    var destinationDataStore = mainVC.router!.dataStore!
+    let sourceDataStore = source.router!.dataStore!
+    passDataToMain(source: sourceDataStore, destination: &destinationDataStore)
     navigateToMain(source: source, destination: mainVC)
-//    passDataToMain(source: dataStore, destination: &businessVC)
   }
 
   // MARK: Navigation
@@ -43,8 +45,8 @@ class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing
   }
   
   //   MARK: Passing data
-  func passDataToMain(source: LoginDataStore?, destination: inout BusinessViewController)
+  func passDataToMain(source: LoginDataStore, destination: inout MainDataStore)
   {
-    //    destination.name = source.name
+    destination.token = source.token
   }
 }

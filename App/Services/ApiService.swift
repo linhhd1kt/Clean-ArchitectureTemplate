@@ -79,11 +79,11 @@ class ApiService {
     
     func request(_ urlRequest: Alamofire.URLRequestConvertible) -> Promise<JSON>
     {
-        Helper.showLoading()
+//        Helper.showLoading()
         return Promise<JSON> { seal in
             Alamofire.request(urlRequest).responseJSON()
                 .done { (arg) in
-                    Helper.hideLoading()
+//                    Helper.hideLoading()
                     let json = JSON(arg.json)
                     let statusCode = json["status_code"].intValue
                     switch statusCode {
@@ -94,7 +94,7 @@ class ApiService {
                         seal.reject(error)
                     }
                 }.catch({ (error) in
-                    Helper.hideLoading()
+//                    Helper.hideLoading()
                     seal.reject(error)
                 })
         }

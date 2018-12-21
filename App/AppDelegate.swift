@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // configure loger
     configLoger()
     
-    let navigationController = UINavigationController(rootViewController: LaunchViewController())
+    let loginVC = LoginViewController(nibName: "LoginView", bundle: nil)
+    
+    let navigationController = UINavigationController(rootViewController: loginVC)
     window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
     
